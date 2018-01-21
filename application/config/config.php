@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$allowed_domains = array('webcarwash.tear.inf.br', 'webcarwash.tear.inf.br:7780',);
+$allowed_domains = array('webcarwash.tear.inf.br', 'webcarwash.tear.inf.br:7780', '155.94.65.162:7780');
 $default_domain  = 'webcarwash.tear.inf.br';
 
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE)) {
