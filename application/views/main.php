@@ -2,35 +2,38 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title></title>
 
 	<!-- materializecss -->	
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
 
   <!-- jquery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
   <!-- app -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+	<script src="<?php echo base_url('app/login.js'); ?>"></script>
+	<script src="<?php echo base_url('app/main.js'); ?>"></script>
+	<script src="<?php echo base_url('app/reports.js'); ?>"></script>
 
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
-				This div is 12-columns wide on all screen sizes
 				<a class="waves-effect waves-light btn modal-trigger" href="#login">Login</a>
 			</div>
-			<div class="col s6">6-columns (one-half)</div>
-			<div class="col s6">6-columns (one-half)</div>
 		</div>
 	</div>
 
-	<!-- Login Modal Structure -->
+	<!-- Login Modal -->
 	<div id="login" class="modal">
 		<div class="modal-content">
 			<div class="row">
