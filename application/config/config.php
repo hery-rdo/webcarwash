@@ -23,7 +23,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+
+$allowed_domains = array('webcarwash.tear.inf.br', 'webcarwash.tear.inf.br:7780',);
+$default_domain  = 'webcarwash.tear.inf.br';
+
+if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE)) {
+        $domain = $_SERVER['HTTP_HOST'];
+} else {
+        $domain = $default_domain;
+}
+
+if ( ! empty($_SERVER['HTTPS'])) {
+        $config['base_url'] = 'https://'.$domain;
+} else {
+        $config['base_url'] = 'http://'.$domain;
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +50,8 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+// $config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -520,4 +536,5 @@ $config['rewrite_short_tags'] = FALSE;
 | Comma-separated:	'10.0.1.200,192.168.5.0/24'
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
-$config['proxy_ips'] = '';
+// $config['proxy_ips'] = '';
+$config['proxy_ips'] = '155.94.65.162,127.0.0.1';
